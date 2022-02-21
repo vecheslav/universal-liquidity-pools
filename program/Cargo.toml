@@ -1,0 +1,23 @@
+[package]
+name = "universal-liquidity-pools"
+version = "0.1.0"
+edition = "2018"
+
+[features]
+no-entrypoint = []
+test-bpf = []
+
+[dependencies]
+num-derive = "0.3"
+num-traits = "0.2"
+thiserror = "1.0"
+solana-program = "1.6.9"
+spl-token = { version = "3.1", features = [ "no-entrypoint" ] }
+borsh = "0.8.1"
+
+[dev-dependencies]
+solana-sdk = "1.6.9"
+solana-program-test = "1.6.9"
+
+[lib]
+crate-type = ["cdylib", "lib"]
